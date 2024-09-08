@@ -14,7 +14,7 @@ const schemaOptions = [
         { label: "State", value: "state", type: "group" },
 ];
 
-function SidebarForm({ isSidebarOpen, toggleSidebar, sidebarRef }) {
+function SidebarForm({ isSidebarOpen, toggleSidebar }) {
         const [segmentName, setSegmentName] = useState("");
         const [selectedSchemas, setSelectedSchemas] = useState([]);
         const [availableOptions, setAvailableOptions] = useState(schemaOptions);
@@ -69,7 +69,6 @@ function SidebarForm({ isSidebarOpen, toggleSidebar, sidebarRef }) {
 
         return (
                 <div
-                        ref={sidebarRef}
                         className={`fixed top-0 right-0 w-1/3 h-full bg-white shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
                                 } transition-transform duration-300 ease-in-out p-6 z-50`}
                 >

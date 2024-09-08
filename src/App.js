@@ -10,19 +10,19 @@ function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isSidebarOpen && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsSidebarOpen(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (isSidebarOpen && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+  //       setIsSidebarOpen(false);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isSidebarOpen]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isSidebarOpen]);
 
   return (
     <div className="h-screen flex justify-center items-center relative">
@@ -40,7 +40,7 @@ function App() {
       <SidebarForm
         isSidebarOpen={isSidebarOpen}
         toggleSidebar={toggleSidebar}
-        sidebarRef={sidebarRef}
+      // sidebarRef={sidebarRef}
       />
       <ToastNotifications />
     </div>
