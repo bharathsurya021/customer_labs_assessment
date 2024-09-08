@@ -24,6 +24,7 @@
 1. **Navigate to the Client Directory**:
 
    ```bash
+   git clone https://github.com/bharathsurya021/customer_labs_assessment.git
    cd your_foldername
    ```
 
