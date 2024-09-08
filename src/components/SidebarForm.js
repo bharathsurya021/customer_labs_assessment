@@ -46,6 +46,10 @@ function SidebarForm({ isSidebarOpen, toggleSidebar }) {
                         showToast("error", "Segment name is required.");
                         return;
                 }
+                if (selectedSchemas.length === 0) {
+                        showToast("error", "At least one schema should be added.");
+                        return;
+                }
 
                 const data = {
                         segment_name: segmentName,
