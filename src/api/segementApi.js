@@ -2,7 +2,7 @@ import { showToast } from "../components/ToastNotification";
 
 export const saveSegment = async (data) => {
         try {
-                const webhookUrl = "/de331622-643f-4195-976b-a034fc9bef85";
+                const webhookUrl = "https://webhook.site/de331622-643f-4195-976b-a034fc9bef85";
                 const response = await fetch(webhookUrl, {
                         method: "POST",
                         headers: {
